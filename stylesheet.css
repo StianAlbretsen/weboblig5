@@ -322,6 +322,9 @@ img {
     #subMenu3 {
         grid-column: 3/4;
     }
+    #subMenu4 {
+        grid-column: 4/5;
+    }
     #subNav1 {
         grid-column: 1/2;
         grid-row: 2/3
@@ -332,6 +335,10 @@ img {
     }
     #subNav3 {
         grid-column: 3/4;
+        grid-row: 2/3
+    }
+    #subNav4 {
+        grid-column: 4/5;
         grid-row: 2/3
     }
 

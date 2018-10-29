@@ -24,12 +24,14 @@ function oppstart(){
     document.getElementById("subMenu1").addEventListener("click", subMenu1);
     document.getElementById("subMenu2").addEventListener("click", subMenu2);
     document.getElementById("subMenu3").addEventListener("click", subMenu3);
+    document.getElementById("subMenu4").addEventListener("click", subMenu4);
 
     // Viser alle submenyene
     function mobileMenu() {
         document.getElementById("subNav1").classList.toggle("hiddenAlways");
         document.getElementById("subNav2").classList.toggle("hiddenAlways");
         document.getElementById("subNav3").classList.toggle("hiddenAlways");
+        document.getElementById("subNav4").classList.toggle("hiddenAlways");
     }
 
     // Viser submeny 1 og skjuler de andre hvis de er åpne
@@ -37,15 +39,24 @@ function oppstart(){
         document.getElementById("subNav1").classList.toggle("hiddenAlways");
         document.getElementById("subNav2").classList.add("hiddenAlways");
         document.getElementById("subNav3").classList.add("hiddenAlways");
+        document.getElementById("subNav4").classList.add("hiddenAlways");
     }
     function subMenu2() {
         document.getElementById("subNav2").classList.toggle("hiddenAlways");
         document.getElementById("subNav1").classList.add("hiddenAlways");
         document.getElementById("subNav3").classList.add("hiddenAlways");
+        document.getElementById("subNav4").classList.add("hiddenAlways");
     }
     function subMenu3() {
         document.getElementById("subNav3").classList.toggle("hiddenAlways");
         document.getElementById("subNav2").classList.add("hiddenAlways");
         document.getElementById("subNav1").classList.add("hiddenAlways");
+        document.getElementById("subNav4").classList.add("hiddenAlways");
+    }
+    function subMenu4() {
+        document.getElementById("subNav4").classList.toggle("hiddenAlways");
+        document.getElementById("subNav2").classList.add("hiddenAlways");
+        document.getElementById("subNav1").classList.add("hiddenAlways");
+        document.getElementById("subNav3").classList.add("hiddenAlways");
     }
 }
