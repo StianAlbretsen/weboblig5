@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css" media="screen">
+    <link rel="stylesheet" href="printSheet.css" media="print">
+    <script src="mainscript.js"></script>
+    <title>CMS-systemer - Webutvikling</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Kadwa:400,700');
+    </style>
+</head>
+<body>
+    <a href="#mainArtikkel" class="hoppTilHovedinnhold">Hopp til hovedinnhold</a>
+    <div class="wrapper">
+
+        <header class="header">
+            <a class="headerLink" href="index.html"><h1 class="headerLink">Webutvikling</h1></a>
+            
+            <button type="button" id="navMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainMenu" class="nav hidden">
+                <button class="hidden dropdownBtn" type="button" id="subMenu1">Artikler Oblig 2
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav1">
+                    <li><a class="asideLink" href="git.html">Git / Github</a></li>
+                    <li><a class="asideLink" href="mediatyper.html">Media-Typer</a></li>
+                    <li><a class="asideLink" href="css-layouts.html">CSS-Layouts</a></li>
+                </ul>
+
+                <button class="hidden dropdownBtn" type="button" id="subMenu2">Artikler Oblig 3
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav2">
+                    <li><a class="asideLink" href="responsivtDesign.html">Responsivt design</a></li>
+                    <li><a class="asideLink" href="universellUtforming.html">Universell utforming</a></li>
+                    <li><a class="asideLink" href="wamp.html">WAMP</a></li>
+                </ul>
+
+                <button class="hidden dropdownBtn" type="button" id="subMenu3">Artikler Oblig 4
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav3">
+                    <li><a class="asideLink" href="wordpress.html">WordPress</a></li>
+                    <li><a class="asideLink" href="CMS-systemer.html">CMS-systemer</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="mainArtikkel">
+
+            <nav class="breadcrums">
+                <a href="../index.html">Mitt Studiewebsted </a>
+                <a href="index.html"> Webutvikling </a>
+                <a href="#"> CMS-systemer</a>
+            </nav>
+
+            <article>
+                <header>
+                    <h2>CMS-systemer</h2>
+                    <p class="publisert" vocab="https://schema.org/CreativeWork">
+                        Publisert <time datetime="2018-10-26" property="dateCreated">26.10.2018</time>.
+                    </p>
+                </header>
+                <p>
+                    CMS er programvare som lar oss lage et brukergrensesnitt til redigering av 
+                    et nettsted uten å skrive kode. CMS står for "Content Management System". Det finnes veldig mange 
+                    CMS-løsninger, men de største er <a href="wordpress.html">WordPress,</a> Drupal, Joomla, Blogger, 
+                    Weebly og Wix. Selv om CMS-systemer er en fantastisk teknologi, er det ikke bare fordeler. I denne 
+                    artikkelen ser jeg på forskjellige fordeler og ulemper ved å bruke et CMS.
+                </p>
+                <img 
+                    class="artikkelBilde img"
+                    src="medier/pros-cons.png"
+                    alt="mann som holder et grønt check symbol og rødt kryss. pros and cons"
+                />
+                <h3>Fordeler</h3>
+                <ul>
+                    <li>Det finnes veldig mange alternative CMSer, alt til sitt bruk.</li>
+                    <li>Raskere utvikling. På grunn av templates og widgets er utviklingstiden drastisk redusert.</li>
+                    <li>Kan være mye billigere fordi utviklingstiden er kort og fordi det ikke trengs en utvikler 
+                        for å vedlikeholde innholdet. Mange CMSer er dessuten gratis, de fleste mest populære er gratis.
+                    </li>
+                    <li>Trenger ikke å skrive kode, alt kan gjøres i en editor</li>
+                    <li>Slipper FTP for å legge til innhold.</li>
+                    <li>Skiller på innhold, design og funksjonalitet. Kan gi forskjellige brukere forskjellig 
+                        tilgang for redigering.
+                    </li>
+                    <li>Versjonskontroll</li>
+                    <li>Mange CMSer er gode på å passe semantikk og generelt sett det som er bra for universell 
+                        utforming og søkemotoroptimalisering.
+                    </li>
+                </ul>
+                <h3>Ulemper</h3>
+                <ul>
+                    <li>Redusert fleksibilitet.</li>
+                    <li>Hvis man trenger en veldig spesifikk funksjonalitet, er det ikke sikkert et CMS kan ha 
+                        denne funksjonaliteten.
+                    </li>
+                    <li>CMS utviklere må lære seg et gitt CMS, noe som kan være tidkrevende om man skal kunne 
+                        bruke systemet fullt ut. 
+                    </li>
+                    <li>CMS-programvaren må oppdateres for å redusere rissikoen for å bli hacket. Dette gjelder 
+                        spesielt WordPress fordi det er mest brukt og derfor mest atraktivt å hacke.
+                    </li>
+                </ul>
+            </article>
+        </main>
+
+        <aside>
+            <section class="asideS1">
+                <h2>Nyttige nettressurser</h2>
+                <iframe 
+                    src="https://www.youtube.com/embed/ipgj1dlLbgg" 
+                     
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+                </iframe>
+            </section>
+
+            <section class="asideS2">
+                <h3>CMS-systemer</h3>
+                <a class="asideLink" target="_blank" href="https://www.sullivanandwolf.com/article-pros-cons-CMS.php">Pros and cons of CMS</a>
+                <a class="asideLink" target="_blank" href="https://webutvikling.ninja/cms/">Alt om Content Management Systems</a>
+                <a class="asideLink" target="_blank" href="https://wordpress.org/">WordPress</a>
+                <a class="asideLink" target="_blank" href="https://www.drupal.org/">Drupal</a>
+                <a class="asideLink" target="_blank" href="https://www.joomla.org/">Joomla</a>
+            </section>
+            
+            <section class="asideS3">
+                <h3>Google</h3>
+                <a class="asideLink" target="_blank" href="https://www.google.no/search?rlz=1C1GCEA_enNO810NO810&ei=dMLSW4TSEciQmgWk_pmADg&q=cms+system&oq=CMS&gs_l=psy-ab.1.0.0i71k1l8.0.0.0.12084.0.0.0.0.0.0.0.0..0.0....0...1c..64.psy-ab..0.0.0....0.MIE0GVA7Qi0">google: "CMS system"</a>
+            </section>
+        </aside>
+
+        <button onclick="topFunction()" id="toppBtn" title="Gå til toppen av siden">Topp</button>
+
+        <footer>
+            <p>&copy; 2018  Stian Albretsen</p>
+            <a style="color: #bbbbbb;" href="mailto:stian.albretsen@hiof.no">stian.albretsen@hiof.no</a><br />
+            <a href="../index.html">Studiewebsted</a>
+        </footer>
+        
+    </div>
+
+</body>
+</html>

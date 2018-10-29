@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css" media="screen">
+    <link rel="stylesheet" href="printSheet.css" media="print">
+    <script src="mainscript.js"></script>
+    <title>WordPress - Webutvikling</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Kadwa:400,700');
+    </style>
+</head>
+<body>
+    <a href="#mainArtikkel" class="hoppTilHovedinnhold">Hopp til hovedinnhold</a>
+    <div class="wrapper">
+
+        <header class="header">
+            <a class="headerLink" href="index.html"><h1 class="headerLink">Webutvikling</h1></a>
+            
+            <button type="button" id="navMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainMenu" class="nav hidden">
+                <button class="hidden dropdownBtn" type="button" id="subMenu1">Artikler Oblig 2
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav1">
+                    <li><a class="asideLink" href="git.html">Git / Github</a></li>
+                    <li><a class="asideLink" href="mediatyper.html">Media-Typer</a></li>
+                    <li><a class="asideLink" href="css-layouts.html">CSS-Layouts</a></li>
+                </ul>
+
+                <button class="hidden dropdownBtn" type="button" id="subMenu2">Artikler Oblig 3
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav2">
+                    <li><a class="asideLink" href="responsivtDesign.html">Responsivt design</a></li>
+                    <li><a class="asideLink" href="universellUtforming.html">Universell utforming</a></li>
+                    <li><a class="asideLink" href="wamp.html">WAMP</a></li>
+                </ul>
+
+                <button class="hidden dropdownBtn" type="button" id="subMenu3">Artikler Oblig 4
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav3">
+                    <li><a class="asideLink" href="wordpress.html">WordPress</a></li>
+                    <li><a class="asideLink" href="CMS-systemer.html">CMS-systemer</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="mainArtikkel">
+
+            <nav class="breadcrums">
+                <a href="../index.html">Mitt Studiewebsted </a>
+                <a href="index.html"> Webutvikling </a>
+                <a href="#"> WordPress</a>
+            </nav>
+
+            <article>
+                <header>
+                    <h2>WordPress</h2>
+                    <p class="publisert">
+                        Publisert <time datetime="2018-10-24">24.10.2018</time>.
+                    </p>
+                </header>
+                <p>
+                    Nedenfor beskriver jeg prosessen med å sette opp og teste WordPress. Jeg testet 
+                    dette på en <a href="wamp.html">WAMP server</a>. Bildene kan trykkes på for å se de i full størrelse.
+                </p>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/login.png">
+                    <img 
+                        src="medier/wordpressBilder/login.png" 
+                        alt="skjermdump, php MyAdmin login" 
+                    /></a>
+                    <figcaption class="normText">
+                        Etter å ha installert en <a href="wamp.html">WAMP server</a>, er det mulig å lage en database til 
+                        WordPress ved å skrive "localhost/phpmyadmin" i nettleserens adressefelt. Standard brukernavn og passord 
+                        er henholdsvis "root" og "" (altså ingen passord).
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/admin1.png">
+                    <img 
+                        src="medier/wordpressBilder/admin1.png" 
+                        alt="php myadmin hovedside" 
+                    /></a>
+                    <figcaption class="normText">
+                        For å lage en database til WordPress, trykk på "Databaser".
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/admin2.png">
+                    <img 
+                        src="medier/wordpressBilder/admin2.png" 
+                        alt="php myadmin databaseoversikt" 
+                    /></a>
+                    <figcaption class="normText">
+                        Skriv navn på databasen, eksempelvis "wordpress", og trykk "opprett". Nå er databasen opprettet.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/install1.png">
+                    <img 
+                        src="medier/wordpressBilder/install1.png" 
+                        alt="filutforsker og åpen .zip fil" 
+                    /></a>
+                    <figcaption class="normText">
+                        Pakk ut wordpress-mappen til root. I mitt tilfelle var dette "C:\wamp64\www".
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/wpsetup1.png">
+                    <img 
+                        src="medier/wordpressBilder/wpsetup1.png" 
+                        alt="wordpress setup. velg språk." 
+                    /></a>
+                    <figcaption class="normText">
+                        Nå kan installasjonen av WordPress-siden starte. Gå til "localhost/wordpress" og velg språk.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/wpsetup2.png">
+                    <img 
+                        src="medier/wordpressBilder/wpsetup2.png" 
+                        alt="wordpress setup infoside" 
+                    /></a>
+                    <figcaption class="normText">
+                        På dette steget får jeg litt informasjon om hva jeg trenger for å fullføre installasjonen, samt 
+                        hva som kan gjøres hvis prosessen er misslykket.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/wpsetup3.png">
+                    <img 
+                        src="medier/wordpressBilder/wpsetup3.png" 
+                        alt="wordpress database login" 
+                    /></a>
+                    <figcaption class="normText">
+                        Her prøver jeg å logge på med bruker og passord til databasen jeg opprettet til WordPress.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/wpsetup4.png">
+                    <img 
+                        src="medier/wordpressBilder/wpsetup4.png" 
+                        alt="feilmelding" 
+                    /></a>
+                    <figcaption class="normText">
+                        Her får jeg beskjed om at config filen allerede finnes. Jeg får også beskjed om at løsningen er å 
+                        slette filen og prøve på nytt.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/wpsetup5.png">
+                    <img 
+                        src="medier/wordpressBilder/wpsetup5.png" 
+                        alt="tilbake til å velge språk" 
+                    /></a>
+                    <figcaption class="normText">
+                        Etter å ha slettet filen, må jeg velge språk på nytt.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/wpsetup6.png">
+                    <img 
+                        src="medier/wordpressBilder/wpsetup6.png" 
+                        alt="wordpress installasjon. nettstedstittel, brukernavn, passord, epost" 
+                    /></a>
+                    <figcaption class="normText">
+                        Det fungerte! Her får jeg velge navn på nettstedet, samt brukernavn, passord og epost-adresse. 
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/wpsetup7.png">
+                    <img 
+                        src="medier/wordpressBilder/wpsetup7.png" 
+                        alt="Suksess!"
+                    /></a>
+                    <figcaption class="normText">
+                        Suksess! Brukeren til WordPress-siden er nå opprettet.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/wpsetup8.png">
+                    <img 
+                        src="medier/wordpressBilder/wpsetup8.png" 
+                        alt="wordpress login"
+                    /></a>
+                    <figcaption class="normText">
+                        Jeg får nå logge inn på WordPress-siden.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/testside1.png">
+                    <img 
+                        src="medier/wordpressBilder/testside1.png" 
+                        alt="testnettsted"
+                    /></a>
+                    <figcaption class="normText">
+                        Den autogenererte testsiden vises.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/leggTilTema.png">
+                    <img 
+                        src="medier/wordpressBilder/leggTilTema.png" 
+                        alt="wordpress temavelger" 
+                    /></a>
+                    <figcaption class="normText">
+                        For å finne temavelgeren, hovre over navnet på nettstedet i øverste venstre hjørne og velg kontrollpanel. 
+                        Velg så "Utseende" og "temaer" i undermenyen og trykk på "legg til".
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/leggTilTema2.png">
+                    <img 
+                        src="medier/wordpressBilder/leggTilTema2.png" 
+                        alt="wordpress temavelger" 
+                    /></a>
+                    <figcaption class="normText">
+                        Her går det ann å søke etter et bestemt tema, eller se igjennom populære temaer. Når du har funnet et tema, 
+                        trykk på "installer" og "aktiver" for å bytte til det nye temaet.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/leggTilTema3.png">
+                    <img 
+                        src="medier/wordpressBilder/leggTilTema3.png" 
+                        alt="tema setup" 
+                    /></a>
+                    <figcaption class="normText">
+                        Mange temaer kommer med utvidet funksjonalitet ved å tilby tilhørende utvidelser (plugins). Her får jeg tilbud 
+                        om å installere "Orbid Fox Companion", noe jeg velger å ikke gjøre.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/tema1konfig.png">
+                    <img 
+                        src="medier/wordpressBilder/tema1konfig.png" 
+                        alt="tema setup" 
+                    /></a>
+                    <figcaption class="normText">
+                        Her kan jeg bytte bakgrunnsbilde i headeren, endre tittel, tekst, tekst på knapp og hvilken url knappen skal 
+                        linke til.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/tema1konfig2.png">
+                    <img 
+                        src="medier/wordpressBilder/tema1konfig2.png" 
+                        alt="wordpress widget" 
+                    /></a>
+                    <figcaption class="normText">
+                        Her tester jeg å legge til en widget.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/tema2konfig.png">
+                    <img 
+                        src="medier/wordpressBilder/tema2konfig.png" 
+                        alt="wordpress widget" 
+                    /></a>
+                    <figcaption class="normText">
+                        Her tester jeg en annen widget.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/plugin1.png">
+                    <img 
+                        src="medier/wordpressBilder/plugin1.png" 
+                        alt="plugin bb press" 
+                    /></a>
+                    <figcaption class="normText">
+                        Her tester jeg en plugin som heter bbPress og som brukes til å lage forum.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/plugin2.png">
+                    <img 
+                        src="medier/wordpressBilder/plugin2.png" 
+                        alt="plugin bb press. nytt forum" 
+                    /></a>
+                    <figcaption class="normText">
+                        Trykk på "Nytt forum" for å opprette et nytt forum.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/plugin3.png">
+                    <img 
+                        src="medier/wordpressBilder/plugin3.png" 
+                        alt="plugin bb press. nytt forum ferdig" 
+                    /></a>
+                    <figcaption class="normText">
+                        Nytt forum om Chuck Norris!
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/contactFormPlugin1.png">
+                    <img 
+                        src="medier/wordpressBilder/contactFormPlugin1.png" 
+                        alt="plugin, contact Form 7." 
+                    /></a>
+                    <figcaption class="normText">
+                        Her installer jeg en ny plugin, Contact Form 7. Dette er en ganske engel plugin som kan lage kontaktskjemaer 
+                        som du engelt plasserer på siden med en type link.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/contactFormPlugin2.png">
+                    <img 
+                        src="medier/wordpressBilder/contactFormPlugin2.png" 
+                        alt="kontaktskjema" 
+                    /></a>
+                    <figcaption class="normText">
+                        Ferdig kontaktskjema!
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/artikkelChuckNorris.png">
+                    <img 
+                        src="medier/wordpressBilder/artikkelChuckNorris.png" 
+                        alt="artikkel med fremhevet bilde" 
+                    /></a>
+                    <figcaption class="normText">
+                        Chuck Norris artikkel med fremhevet bilde. 
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/artikkelSamuel.png">
+                    <img 
+                        src="medier/wordpressBilder/artikkelSamuel.png" 
+                        alt="artikkel med fremhevet bilde" 
+                    /></a>
+                    <figcaption class="normText">
+                        Samuel L Jackson artikkel med fremhevet bilde. 
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/forside.png">
+                    <img 
+                        src="medier/wordpressBilder/forside.png" 
+                        alt="forside" 
+                    /></a>
+                    <figcaption class="normText">
+                        Forside med fremhevet bilde.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/kontaktSide.png">
+                    <img 
+                        src="medier/wordpressBilder/kontaktSide.png" 
+                        alt="kontaktside" 
+                    /></a>
+                    <figcaption class="normText">
+                        Kontaktside med fremmhevet bilde og kontaktskjema.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/infoside.png">
+                    <img 
+                        src="medier/wordpressBilder/infoside.png" 
+                        alt="infoside" 
+                    /></a>
+                    <figcaption class="normText">
+                        Infoside med dummy-tekst (bacon!) og fremmhevet bilde.
+                    </figcaption>
+                </figure>
+                <br />
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig4/medier/wordpressBilder/ferdigSidebar.png">
+                    <img 
+                        src="medier/wordpressBilder/ferdigSidebar.png" 
+                        alt="forside" 
+                    /></a>
+                    <figcaption class="normText">
+                        Dette er hvordan forsiden ser ut med sidepanelet.
+                    </figcaption>
+                </figure>
+                <br />
+            </article>
+        </main>
+
+        <aside>
+            <section class="asideS1">
+                <h2>Nyttige nettressurser</h2>
+                <iframe 
+                    src="https://www.youtube.com/embed/8OBfr46Y0cQ" 
+                     
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+                </iframe>
+            </section>
+            
+            <section class="asideS2">
+                <h3>WordPress</h3>
+                <a class="asideLink" target="_blank" href="https://nb.wordpress.org/">Møt WordPress</a>
+                <a class="asideLink" target="_blank" href="https://nb.wordpress.org/download/">Last ned WordPress</a>
+                <a class="asideLink" target="_blank" href="https://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Installation">Famous 5-Minute Installation</a>
+                <a class="asideLink" target="_blank" href="https://www.wp101.com/tutorial/what-is-wordpress/">Introduksjon til WordPress</a>
+                <a class="asideLink" target="_blank" href="https://www.siteground.com/tutorials/wordpress/">WordPress Tutorial</a>
+            </section>
+            
+            <section class="asideS3">
+                <h3>Google</h3>
+                <a class="asideLink" target="_blank" href="https://www.google.no/search?q=wordpress&oq=wordpress&aqs=chrome.0.69i59j69i60l3j0j35i39.2175j0j4&sourceid=chrome&ie=UTF-8">Google "WordPress"</a>
+            </section>
+        </aside>
+
+        <button onclick="topFunction()" id="toppBtn" title="Gå til toppen av siden">Topp</button>
+
+        <footer>
+            <p>&copy; 2018  Stian Albretsen</p>
+            <a style="color: #bbbbbb;" href="mailto:stian.albretsen@hiof.no">stian.albretsen@hiof.no</a><br />
+            <a href="../index.html">Studiewebsted</a>
+        </footer>
+        
+    </div>
+
+</body>
+</html>

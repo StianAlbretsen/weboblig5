@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css" media="screen">
+    <link rel="stylesheet" href="printSheet.css" media="print">
+    <script src="mainscript.js"></script>
+    <title>CSS-layouts - Webutvikling</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Kadwa:400,700');
+    </style>
+</head>
+<body>
+    <a href="#mainArtikkel" class="hoppTilHovedinnhold">Hopp til hovedinnhold</a>
+    <div class="wrapper">
+
+        <header class="header">
+            <a class="headerLink" href="index.html"><h1 class="headerLink">Webutvikling</h1></a>
+            
+            <button type="button" id="navMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainMenu" class="nav hidden">
+                <button class="hidden dropdownBtn" type="button" id="subMenu1">Artikler Oblig 2
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav1">
+                    <li><a class="asideLink" href="git.html">Git / Github</a></li>
+                    <li><a class="asideLink" href="mediatyper.html">Media-Typer</a></li>
+                    <li><a class="asideLink" href="css-layouts.html">CSS-Layouts</a></li>
+                </ul>
+
+                <button class="hidden dropdownBtn" type="button" id="subMenu2">Artikler Oblig 3
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav2">
+                    <li><a class="asideLink" href="responsivtDesign.html">Responsivt design</a></li>
+                    <li><a class="asideLink" href="universellUtforming.html">Universell utforming</a></li>
+                    <li><a class="asideLink" href="wamp.html">WAMP</a></li>
+                </ul>
+
+                <button class="hidden dropdownBtn" type="button" id="subMenu3">Artikler Oblig 4
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav3">
+                    <li><a class="asideLink" href="wordpress.html">WordPress</a></li>
+                    <li><a class="asideLink" href="CMS-systemer.html">CMS-systemer</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="mainArtikkel">
+
+            <nav class="breadcrums">
+                <a href="../index.html">Mitt Studiewebsted </a>
+                <a href="index.html"> Webutvikling </a>
+                <a href="#"> CSS-Layouts</a>
+            </nav>
+
+            <article>
+                <header>
+                    <h2>CSS-Layouts</h2>
+                    <p class="publisert">
+                        Publisert <time datetime="2018-09-25">25.09.2018</time>.
+                    </p>
+                </header>
+                
+                <h3>CSS Grid</h3>
+
+                <figure class="artikkelBilde">
+                    <img 
+                        src="medier/CSS_Grid.jpeg" 
+                        alt="Eksempelbilde, CSS grid." 
+                    />
+                </figure>
+
+                <p>
+                    <strong>CSS Grid Layout</strong> er den nyeste og definitivt beste måten å lage et sideoppsett.
+                    Med Grid kan man enkelt kontrollere både rader og kolonner, og velge nøyaktig hvor de 
+                    forskjellige elementene skal plasseres.
+                </p>
+                <p>
+                    Grid kan settes opp på følgende måte;
+                </p>
+                <pre>
+.grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 1em;
+    grid-auto-columns: min-content;     
+    padding:1em;
+    max-width: 95vw;
+}
+                </pre>
+                <p>
+                    "display: grid;" gir tilgang til grid-funksjonalitet<br />
+                    "grid-template-columns:" velger hvordan kolonnene skal deles opp<br />
+                    "grid-gap:" spesifiserer mellomrom mellom elementene
+                </p>
+                <pre>
+.header {
+    background: url(headerBackground.png);
+    background-size: 100% 100%;
+    padding:0.4em;
+    grid-column: 1/3;
+    grid-row: 1/3;                       
+    border-radius: 5px;
+    color: #5e6e6b;
+    text-shadow: 0.3em 0.3em 0.3em #000000;
+    font-size: 1.2em;
+    text-align: center;
+}
+                </pre>
+                <p>
+                    "grid-column:" og "grid-row:" spesifiserer hvor i grid elementet skal være.
+                </p>
+                <pre>
+.grid aside {
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 1em;
+    background:rgba(255, 255, 255, 0.1);
+    color: #bbbbbb;
+    padding:1em;
+    border-radius: 5px;
+
+}
+                </pre>
+                <p>
+                    Her setter vi en grid inne i en grid.
+                </p>
+                <pre>
+.grid footer {
+    background:rgba(255, 255, 255, 0.1);
+    color: #bbbbbb;
+    padding:1em;
+    grid-column: 1/3;
+    border-radius: 5px;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    grid-auto-columns: min-content;
+    padding:1em;
+}
+                </pre>
+                <p>
+                    Her setter enda en grid inne i en grid.
+                </p>
+                <pre>
+.grid main {
+    background:rgba(255, 255, 255, 0.1);
+    color: #bbbbbb;
+    padding:1em;
+    grid-column: 1/2;
+    border-radius: 5px;
+}
+                </pre>
+                <p>
+                    Her spesifiserer vi at elementet ".grid main" kun skal strekke seg over en kolonne. 
+                    "grid-column: 1/2;" kan vi oversette til "strekk deg fra den første veggen i den første 
+                    kolonnen, til den første veggen i den andre kolonnen".
+                </p>
+                
+                <h3>CSS Flexbox</h3>
+
+                <figure class="artikkelBilde">
+                    <img 
+                        src="medier/CSS_Flexbox.png" 
+                        alt="Eksempelbilde, CSS flexbox." 
+                    />
+                    <figcaption>
+                        Eksempel på hvordan vi kan bruke Flexbox.
+                    </figcaption>
+                </figure>
+
+                <p>
+                    <strong>CSS Flexbox</strong> er en annen måte å lage sideoppsett. 
+                    Når man skal bruke Flexbox, er det alltid viktig å tenke på hvilken 
+                    retning elementene sorteres. Det kan vi bestemme ved å bruke flex-direction. 
+                    Flex-direction har fire mulige values; 
+                </p>
+                <ul>
+                    <li>row</li>
+                    <li>row-reverse</li>
+                    <li>column</li>
+                    <li>column-reverse</li>
+                </ul>
+                
+                <p>
+                    To viktige egenskaper er <strong>align-items</strong> og <strong>justify-content</strong>. 
+                    Egenskapen "align-items" justerer elementene på tverraksen, og "justify-content" brukes 
+                    til å justere elementene på hovedaksen.<br />
+                    Mulige values for align-items er;
+                </p>
+                <ul>
+                    <li>stretch</li>
+                    <li>flex-start</li>
+                    <li>flex-end</li>
+                    <li>center</li>
+                </ul>
+                <p>Mulige values for justify-content er;</p>
+                <ul>
+                    <li>flex-start</li>
+                    <li>flex-end</li>
+                    <li>center</li>
+                    <li>space-around</li>
+                    <li>space-between</li>
+                    <li>space-evenly</li>
+                </ul>
+                
+                <p>
+                    For mer info og illustrasjoner, <a style="color: #bbbbbb;" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox#The_main_axis">les mer her.</a>
+                </p>
+
+            </article>
+        </main>
+
+        <aside>
+            <section class="asideS1">
+                <h2>Nyttige nettressurser</h2>
+                <iframe 
+                    src="https://www.youtube.com/embed/jV8B24rSN5o" 
+                     
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+                </iframe>
+            </section>
+            
+            <section class="asideS2">
+                <h3>CSS-Layout</h3>
+                <a class="asideLink" target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction">MDN: Introduction to CSS layout</a>
+                <a class="asideLink" target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout">MDN: CSS layout</a>
+                <a class="asideLink" target="_blank" href="https://www.smashingmagazine.com/2018/05/guide-css-layout/#top">SmashingMagazine: Getting Started With CSS Layout</a>
+                <a class="asideLink" target="_blank" href="https://css-tricks.com/guides/layout/">CSS-Tricks: The Different Kinds of CSS Layout</a>
+                <a class="asideLink" target="_blank" href="https://colorlib.com/wp/css-layouts/">colorlib.: 30 Free Beautiful CSS Layouts</a>
+            </section>
+            
+            <section class="asideS3">
+                <h3>Google</h3>
+                <a class="asideLink" target="_blank" href="https://www.google.no/search?q=css+layout&oq=css&aqs=chrome.0.69i59j69i60l2j69i57j69i60j69i65.899j0j7&sourceid=chrome&ie=UTF-8">Google: "css layout"</a>
+            </section>
+        </aside>
+
+        <button onclick="topFunction()" id="toppBtn" title="Gå til toppen av siden">Topp</button>
+
+        <footer>
+            <p>&copy; 2018  Stian Albretsen</p>
+            <a style="color: #bbbbbb;" href="mailto:stian.albretsen@hiof.no">stian.albretsen@hiof.no</a><br />
+            <a href="../index.html">Studiewebsted</a>
+        </footer>
+        
+    </div>
+
+</body>
+</html>

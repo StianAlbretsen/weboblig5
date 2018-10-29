@@ -1,0 +1,19 @@
+body{ 
+    background-color:#FFFFFF; 
+    background-image:none; 
+    color:#000000;
+    font-family: 'Times New Roman', Times, serif;
+    width:100%; 
+}
+
+nav{ 
+    display: none;
+}
+
+aside{ 
+    display: none;
+}
+
+.fb-like{
+    display: none;
+}

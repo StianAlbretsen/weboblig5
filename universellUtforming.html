@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css" media="screen">
+    <link rel="stylesheet" href="printSheet.css" media="print">
+    <script src="mainscript.js"></script>
+    <title>Universell utforming - Webutvikling</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Kadwa:400,700');
+    </style>
+</head>
+<body>
+    <a href="#mainArtikkel" class="hoppTilHovedinnhold">Hopp til hovedinnhold</a>
+    <div class="wrapper">
+
+        <header class="header">
+            <a class="headerLink" href="index.html"><h1 class="headerLink">Webutvikling</h1></a>
+            
+            <button type="button" id="navMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainMenu" class="nav hidden">
+                <button class="hidden dropdownBtn" type="button" id="subMenu1">Artikler Oblig 2
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav1">
+                    <li><a class="asideLink" href="git.html">Git / Github</a></li>
+                    <li><a class="asideLink" href="mediatyper.html">Media-Typer</a></li>
+                    <li><a class="asideLink" href="css-layouts.html">CSS-Layouts</a></li>
+                </ul>
+
+                <button class="hidden dropdownBtn" type="button" id="subMenu2">Artikler Oblig 3
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav2">
+                    <li><a class="asideLink" href="responsivtDesign.html">Responsivt design</a></li>
+                    <li><a class="asideLink" href="universellUtforming.html">Universell utforming</a></li>
+                    <li><a class="asideLink" href="wamp.html">WAMP</a></li>
+                </ul>
+
+                <button class="hidden dropdownBtn" type="button" id="subMenu3">Artikler Oblig 4
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav3">
+                    <li><a class="asideLink" href="wordpress.html">WordPress</a></li>
+                    <li><a class="asideLink" href="CMS-systemer.html">CMS-systemer</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="mainArtikkel">
+
+            <nav class="breadcrums">
+                <a href="../index.html">Mitt Studiewebsted </a>
+                <a href="index.html"> Webutvikling </a>
+                <a href="#"> Universell utforming</a>
+            </nav>
+
+            <article>
+                <header>
+                    <h2>Universell utforming</h2>
+                    <p class="publisert">
+                        Publisert <time datetime="2018-10-12">12.10.2018</time>.
+                    </p>
+                </header>
+                <figure class="artikkelBilde">
+                    <img 
+                        class="img"
+                        src="medier/uu-300x218.png" 
+                        alt="" 
+                    />
+                    <figcaption>
+                        Eksempelbilde AAA.
+                    </figcaption>
+                </figure>
+                <p>
+                    Med universell utforming menes, i websammenheng, at alle skal ha lik tilgang hvis det er mulig, 
+                    eller likeverdig tilgang hvis lik tilgang ikke er mulig. I denne artikkelen ser jeg på hva dette har 
+                    å si for utviklere, såvel som brukere.
+                </p>
+                <p>
+                    <strong>Alle kan ha bruk for</strong> et internett som er universelt utformet. Det er lett å tenke at de som har 
+                    bruk for dette er mennesker med varige hemninger som hørselshemmede, blinde, svaksynte, fargeblinde, 
+                    bevegelseshemmede, osv. Men brukere som ikke i utgangspunktet er hemmet på noen måte kan for eksempel 
+                    brekke en arm, eller ha en baby i den ene armen, eller ha en eller annen form for begrensning. Da er det 
+                    greit å, for eksempel, kunne tab'e seg igjennom nettstedet eller lignende. Kanskje brukeren ble sveiseblind 
+                    på jobben? Det kan jo vare en stund, og da er det veldig greit å kunne bruke en skjermleser. Derfor er det 
+                    utrolig viktig at utviklere legger til rette for at disse teknologiene fungerer så bra som mulig.
+                </p>
+                <p>
+                    <strong>Fra utviklerens ståsted</strong> kommer man ikke unna at UU åpner et større marked, og dermed 
+                    genererer mer penger. Dessuten straffer det seg i form av bøter for myndigheter, bedrifter og organisasjoner om man ikke oppfyller 
+                    minimumskravene til WCAG 2.0 som er en internasjonal standard for UU. <a target="_blank" href="https://lovdata.no/dokument/SF/forskrift/2013-06-21-732">
+                    Les om "Forskrift om universell utforming av informasjons- og kommunikasjonsteknologiske (IKT)-løsninger" her</a>.
+                </p>
+                <figure class="artikkelBilde">
+                    <img 
+                        src="medier/wcag.png" 
+                        alt="WCAG 2.0 logo" 
+                    />
+                </figure>
+                <p><strong>WCAG 2.0</strong> er delt inn i fire fokusområder;</p>
+                <ul>
+                    <li><strong>Lesbar</strong>
+                        <ul>
+                            <li>Bilder fungerer ikke like bra om man er blind</li>
+                            <li>Lyd fungerer ikke like bra om man er døv</li>
+                        </ul>
+                    </li>
+                    <li><strong>Anvendelig</strong>
+                        <ul>
+                            <li>Hover fungerer dårlig med skjermleser</li>
+                            <li>Skjermlesere fungerer dårlig med dårlig strukturert HTML-kode</li>
+                        </ul>
+                    </li>
+                    <li><strong>Forståelig</strong>
+                        <ul>
+                            <li>Er alt logisk?</li>
+                        </ul>
+                    </li>
+                    <li><strong>Robust</strong>
+                        <ul>
+                            <li>Robust nok til at innholdet kan leses med forskjellig, tilgjengelig teknologi</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>
+                    Det er egentlig selvsigende at å tilegne seg kunskap om UU er en god ide, fordi UU er pålagt 
+                    myndigheter, bedrifter og organisasjoner. Dette genererer selvfølgelit stor etterspørsel etter 
+                    utviklere med UU-kunskaper, og det er mye lettere å få jobb.
+                </p>
+                <p>
+                    <strong>Man kommer langt</strong> ved å følge reglene for semantisk HTML, da skjermlesere kan 
+                    forstå hva slags innhold som finnes i semantiske tag'er. Eksempelvis &lt;header&gt;, &lt;nav&gt;, 
+                    &lt;main&gt;, &lt;footer&gt;, &lt;aside&gt; osv. Skjermleseren kan for eksempel hoppe direkte 
+                    til hovedinnholdet på siden, ved å hoppe til &lt;main&gt;-elementet. Dette forutsetter selvfølgelig 
+                    at elementet er brukt semantisk riktig. 
+                </p>
+            </article>
+        </main>
+
+        <aside>
+            <section class="asideS1">
+                <h2>Nyttige nettressurser</h2>
+                <iframe 
+                    src="https://www.youtube.com/embed/b0Q5Zp_yKaU" 
+                     
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+                </iframe>
+            </section>
+            
+            <section class="asideS2">
+                <h3>Universell utforming</h3>
+                <a class="asideLink" target="_blank" href="https://uu.difi.no/">Guide til UU i norge</a>
+                <a class="asideLink" target="_blank" href="https://laeringsplattformen.difi.no/kurs/991825827/universell-utforming-e-laeringskurs-nettredaktorer-og-skribenter">Universell Utforming kurs fra Difi</a>
+                <a class="asideLink" target="_blank" href="https://uu.difi.no/krav-og-regelverk/losningsforslag-web">Løsningsforslag for Web i Norge</a>
+                <a class="asideLink" target="_blank" href="https://www.w3schools.com/html/html_accessibility.asp">HTML Accessibility</a>
+                <a class="asideLink" target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">MDN - What is accessibility</a>
+            </section>
+            
+            <section class="asideS3">
+                <h3>Google</h3>
+                <a class="asideLink" target="_blank" href="https://www.google.no/search?q=universell+utforming&rlz=1C1GCEA_enNO810NO810&oq=universell+utforming&aqs=chrome..69i57j69i60l3j0l2.720j0j4&sourceid=chrome&ie=UTF-8">Google "universell utforming"</a>
+            </section>
+        </aside>
+
+        <button onclick="topFunction()" id="toppBtn" title="Gå til toppen av siden">Topp</button>
+
+        <footer>
+            <p>&copy; 2018  Stian Albretsen</p>
+            <a style="color: #bbbbbb;" href="mailto:stian.albretsen@hiof.no">stian.albretsen@hiof.no</a><br />
+            <a href="../index.html">Studiewebsted</a>
+        </footer>
+        
+    </div>
+
+</body>
+</html>

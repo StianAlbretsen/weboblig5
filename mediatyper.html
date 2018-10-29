@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css" media="screen">
+    <link rel="stylesheet" href="printSheet.css" media="print">
+    <script src="mainscript.js"></script>
+    <title>Mediatyper - Webutvikling</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Kadwa:400,700');
+    </style>
+</head>
+<body>
+    <a href="#mainArtikkel" class="hoppTilHovedinnhold">Hopp til hovedinnhold</a>
+    <div class="wrapper">
+
+        <header class="header">
+            <a class="headerLink" href="index.html"><h1 class="headerLink">Webutvikling</h1></a>
+            
+            <button type="button" id="navMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainMenu" class="nav hidden">
+                <button class="hidden dropdownBtn" type="button" id="subMenu1">Artikler Oblig 2
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav1">
+                    <li><a class="asideLink" href="git.html">Git / Github</a></li>
+                    <li><a class="asideLink" href="mediatyper.html">Media-Typer</a></li>
+                    <li><a class="asideLink" href="css-layouts.html">CSS-Layouts</a></li>
+                </ul>
+
+                <button class="hidden dropdownBtn" type="button" id="subMenu2">Artikler Oblig 3
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav2">
+                    <li><a class="asideLink" href="responsivtDesign.html">Responsivt design</a></li>
+                    <li><a class="asideLink" href="universellUtforming.html">Universell utforming</a></li>
+                    <li><a class="asideLink" href="wamp.html">WAMP</a></li>
+                </ul>
+
+                <button class="hidden dropdownBtn" type="button" id="subMenu3">Artikler Oblig 4
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav3">
+                    <li><a class="asideLink" href="wordpress.html">WordPress</a></li>
+                    <li><a class="asideLink" href="CMS-systemer.html">CMS-systemer</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="mainArtikkel">
+
+            <nav class="breadcrums">
+                <a href="../index.html">Mitt Studiewebsted </a>
+                <a href="index.html"> Webutvikling </a>
+                <a href="#"> Media-Typer</a>
+            </nav>
+
+            <article>
+                <header>
+                    <h2>Media-Typer</h2>
+                    <p class="publisert">
+                        Publisert <time datetime="2018-09-27">27.09.2018</time>.
+                    </p>
+                </header>
+                <figure class="artikkelBilde">
+                    <img 
+                        src="medier/responsiveDesign.jpg" 
+                        alt="eksempelbilde av responsive design. bilde viser diverse enheter som alle viser samme nettsted i forskjellige versioner" 
+                    />
+                    <figcaption>
+                        <a style="color: #bbbbbb;" href="https://www.freepik.com/free-photos-vectors/design">Design vector created by Freepik</a>
+                    </figcaption>
+                </figure>
+                <p>
+                    Det er i all hovedsak kun 2 mediatyper som brukes i dag, media="screen" og media="print". 
+                    Mediatypen "screen" brukes til å spesifisere at et stilark er ment for en skjerm, "print" 
+                    brukes for å lage en printervennlig version av siden. 
+                </p>
+                <p>
+                    Den typen som er mest interessant er media="screen", fordi den er veldig nyttig med tanke 
+                    på responsivt design. Man kan nemlig også spesifisere hvilken skjermstørrelse det aktuelle 
+                    stilarket er ment for;
+                </p>
+                <br />
+                <p>
+                    Gjeldende for skjermer opp til og med 480px brede:
+                </p>
+                <pre>
+&lt;link 
+    rel="stylesheet" 
+    href="stylesheetMobile.css" 
+    media="screen and (max-width:480px)"&gt;
+                </pre>
+                <br />
+                <p>
+                    Gjeldende for skjermer fra og med 481px, til og med 959px brede:
+                </p>
+                <pre>
+&lt;link 
+    rel="stylesheet" 
+    href="stylesheetTablet.css" 
+    media="screen and (min-width:481px) 
+                  and (max-width:959px)"&gt;
+                </pre>
+                <br />
+                <p>
+                    Gjeldende for skjermer fra og med 960px brede:
+                </p>
+                <pre>
+&lt;link 
+    rel="stylesheet" 
+    href="stylesheet.css" 
+    media="screen and (min-width:960px)"&gt;
+                </pre>
+                <br />
+                <p>
+                    Det er også mulig å kun bruke et enkelt stilark og spesifisere forskjellige 
+                    skjermstørrelser i samme stilark;
+                </p>
+                <pre>
+.flexMain article {
+    max-width: 30%;
+}
+
+@media (max-width: 580px) {
+    .flexMain article {
+        min-width: 50%;
+    }
+}
+
+@media (max-width: 460px) {
+    .flexMain article {
+        min-width: 100%;
+    }
+}
+                </pre>
+                <p>
+                    Her spesifiseres vidden til samme element tre ganger, alt ettersom hva som passer 
+                    på de forskjellige skjermstørrelsene.
+                </p>
+            </article>
+        </main>
+
+        <aside>
+            <section class="asideS1">
+                <h2>Nyttige nettressurser</h2>
+                <iframe 
+                    src="https://www.youtube.com/embed/jV8B24rSN5o" 
+                     
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+                </iframe>
+            </section>
+            
+            <section class="asideS2">
+                <h3>Responsivt design</h3>
+                <a class="asideLink" target="_blank" href="https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/">Responsive Web Design – What It Is And How To Use It</a>
+                <a class="asideLink" target="_blank" href="https://responsivedesign.is/">Responsive Web Design Is…</a>
+                <a class="asideLink" target="_blank" href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/">Responsive Web Design Basics</a>
+                <a class="asideLink" target="_blank" href="https://www.creativebloq.com/rwd/responsive-web-design-tutorials-71410085">15 really useful responsive web design tutorials</a>
+                <a class="asideLink" target="_blank" href="https://designmodo.com/responsive-design-examples/">Responsive Web Design: 50 Examples and Best Practices</a>
+            </section>
+            
+            <section class="asideS3">
+                <h3>Github</h3>
+                <a class="asideLink" target="_blank" href="https://www.google.no/search?q=github&rlz=1C1GCEA_enNO810NO810&oq=github&aqs=chrome..69i57j0l5.2664j0j7&sourceid=chrome&ie=UTF-8">Google "github"</a>
+            </section>
+        </aside>
+
+        <button onclick="topFunction()" id="toppBtn" title="Gå til toppen av siden">Topp</button>
+
+        <footer>
+            <p>&copy; 2018  Stian Albretsen</p>
+            <a style="color: #bbbbbb;" href="mailto:stian.albretsen@hiof.no">stian.albretsen@hiof.no</a><br />
+            <a href="../index.html">Studiewebsted</a>
+        </footer>
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css" media="screen">
+    <link rel="stylesheet" href="printSheet.css" media="print">
+    <script src="mainscript.js"></script>
+    <title>Responsivt design - Webutvikling</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Kadwa:400,700');
+    </style>
+</head>
+<body>
+    <a href="#mainArtikkel" class="hoppTilHovedinnhold">Hopp til hovedinnhold</a>
+    <div class="wrapper">
+
+        <header class="header">
+            <a class="headerLink" href="index.html"><h1 class="headerLink">Webutvikling</h1></a>
+            
+            <button type="button" id="navMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainMenu" class="nav hidden">
+                <button class="hidden dropdownBtn" type="button" id="subMenu1">Artikler Oblig 2
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav1">
+                    <li><a class="asideLink" href="git.html">Git / Github</a></li>
+                    <li><a class="asideLink" href="mediatyper.html">Media-Typer</a></li>
+                    <li><a class="asideLink" href="css-layouts.html">CSS-Layouts</a></li>
+                </ul>
+
+                <button class="hidden dropdownBtn" type="button" id="subMenu2">Artikler Oblig 3
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav2">
+                    <li><a class="asideLink" href="responsivtDesign.html">Responsivt design</a></li>
+                    <li><a class="asideLink" href="universellUtforming.html">Universell utforming</a></li>
+                    <li><a class="asideLink" href="wamp.html">WAMP</a></li>
+                </ul>
+
+                <button class="hidden dropdownBtn" type="button" id="subMenu3">Artikler Oblig 4
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <ul class="subNav hiddenAlways" id="subNav3">
+                    <li><a class="asideLink" href="wordpress.html">WordPress</a></li>
+                    <li><a class="asideLink" href="CMS-systemer.html">CMS-systemer</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="mainArtikkel">
+
+            <nav class="breadcrums">
+                <a href="../index.html">Mitt Studiewebsted </a>
+                <a href="index.html"> Webutvikling </a>
+                <a href="#"> Responsivt design</a>
+            </nav>
+
+            <article>
+                <header>
+                    <h2>Responsivt design</h2>
+                    <p class="publisert">
+                        Publisert <time datetime="2018-10-05">05.10.2018</time>.
+                    </p>
+                </header>
+                <figure class="artikkelBilde">
+                    <img 
+                        src="medier/resDes2.jpg" 
+                        alt="Responsivt design skal fungere på alle skjermstørrelser." 
+                    />
+                    <figcaption>
+                        Responsivt design skal fungere på alle skjermstørrelser.
+                    </figcaption>
+                </figure>
+
+                <p>
+                    Med responsivt design, snakker vi i denne sammenheng om at nettstedene vi lager skal respondere 
+                    på skjermstørrelsen til klient-enheten. Det er flere måter å oppnå dette på, som media query, media type, 
+                    responsive størrelser (for eksempel %, vw, vh, osv). Det absolutt letteste er å starte med å stile mobilversionen. 
+                    I denne artikkelen viser jeg frem noen eksempler fra min egen kode, samt noen gode eksterne ressurser.
+                </p>
+                <br />
+
+                <h3>Media query</h3>
+                <p>
+                    Media query er min favorittmåte å lage nettstedet responsivt, fordi det er enkelt og jeg kan ha all CSS i 
+                    en enkel fil. Måten å gjøre det på, er å starte stilarket med å stile mobilversionen uten media query. 
+                    Når det er gjort, kan man begynne å lage nettstedet responsivt ved å teste ved å gjøre nettleservinduet større. 
+                    Gjør vinduet større helt til siden ikke ser bra ut, og lag så et brakepoint for den størrelsen. Her kommer media query 
+                    inn i bildet. La oss si at nettstedet ser dårlig ut når man kommer opp i 600px. Fortsett i samme stilark, men sett 
+                    all CSS inne i en media query sånn her;
+                </p>
+                <pre>
+@media screen and (min-width: 600px) {
+    .mainFlex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .mainFlex article {
+        max-width: 48%;
+    }
+}
+                </pre>
+                <p>
+                    Som illustrert i skjermdumpene under, resulterer denne koden i at forsiden viser to og to artikler når skjermvidden er større enn 
+                    eller lik 600px.
+                </p>
+                <figure>
+                        <img 
+                        src="medier/resDesEks599-600.png" 
+                        alt="Eksempel på responsivt design." 
+                    />
+                    <figcaption>
+                        Eksempel på responsivt design.
+                    </figcaption>
+                </figure>
+
+                <p>
+                    Et annet eksempel er sidebaren. Denne har jeg stilert på litt flere forskjellige måter 
+                    for å få den til å passe alle skjermstørrelser. Det lar seg lettere forklare med bilder, legg merke til 
+                    hvordan sidebaren endrer både plassering av sidebaren og plassering av innholdet;
+                </p>
+                <figure>
+                        <img 
+                        src="medier/resDesEksSidebar.png" 
+                        alt="Eksempel på hvordan sidebaren på dette nettstedet er responsivt designet." 
+                    />
+                    <figcaption>
+                            Eksempel på hvordan sidebaren på dette nettstedet er responsivt designet.
+                    </figcaption>
+                </figure>
+                <br />
+
+                <h3>Media type</h3>
+                <p>
+                    En annen måte å gjøre nettstedet responsivt er ved hjelp av flere stilark. Dette gjøres ved å lage et stilark 
+                    for hver brakepoint. Stilarkene linkes inn i &lt;head&gt; ved å spesifisere viewport width på følgende måte;
+                </p>
+                <code>
+                    &lt;link rel="stylesheet" type="text/css"<br /><mark>media="screen and (max-width: 479px)"</mark><br />href="stiler/stilarkMobilLiten.css"&gt;<br /><br />
+                    &lt;link rel="stylesheet" type="text/css"<br /><mark>media="screen and (min-width: 480px)"</mark><br />href="stiler/stilarkMobil.css"&gt;<br /><br />
+                    &lt;link rel="stylesheet" type="text/css"<br /><mark>media="screen and (min-width: 600px)"</mark><br />href="stiler/stilarkTab.css"&gt;<br /><br />
+                    &lt;link rel="stylesheet" type="text/css"<br /><mark>media="screen and (min-width: 900px)"</mark><br />href="stiler/stilarkTabLand.css"&gt;<br /><br />
+                    &lt;link rel="stylesheet" type="text/css"<br /><mark>media="screen and (min-width: 1200px)"</mark><br />href="stiler/stilarkDesktop.css"&gt;
+                </code>
+                <p>
+                    Her er det viktig å linke inn stilarkene i riktig rekkefølge på grunn av cascading effekten 
+                    (det som linkes til nederst blir gjeldende). Hvis stilarkMobil.css var plassert nederst, 
+                    ville den overskrevet stilarkDesktop.css fordi en skjerm som er minimum 1200px også vil bli 
+                    fanget opp av (min-width: 480px).
+                </p>
+                <br />
+
+                <h3>Responsive størrelser</h3>
+                <p>
+                    Ved å bruke responsive størrelser vil man, i mange tilfeller, kunne unngå å lage en media query 
+                    eller et ekstra stilark. Dette er fordi størrelser som %, vw (viewport width), vh (viewport height) 
+                    vil endre seg automatisk etter størrelsen på skjermen/viewport.
+                </p>
+                <figure>
+                        <img 
+                        src="medier/resSizeTest.gif" 
+                        alt="Eksempel på hvordan forskjellige størrelser oppfører seg." 
+                    />
+                    <!-- .gif laget med programvare fra https://www.screentogif.com/ -->
+                    <figcaption>
+                        Eksempel på hvordan forskjellige størrelser oppfører seg.
+                    </figcaption>
+                </figure>
+                
+            </article>
+        </main>
+
+        <aside>
+            <section class="asideS1">
+                <h2>Nyttige nettressurser</h2>
+                <iframe 
+                    src="https://www.youtube.com/embed/jV8B24rSN5o" 
+                     
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+                </iframe>
+            </section>
+            
+            <section class="asideS2">
+                <h3>Responsivt design</h3>
+                <a class="asideLink" target="_blank" href="https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/">Responsive Web Design – What It Is And How To Use It</a>
+                <a class="asideLink" target="_blank" href="https://responsivedesign.is/">Responsive Web Design Is…</a>
+                <a class="asideLink" target="_blank" href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/">Responsive Web Design Basics</a>
+                <a class="asideLink" target="_blank" href="https://www.creativebloq.com/rwd/responsive-web-design-tutorials-71410085">15 really useful responsive web design tutorials</a>
+                <a class="asideLink" target="_blank" href="https://designmodo.com/responsive-design-examples/">Responsive Web Design: 50 Examples and Best Practices</a>
+            </section>
+            
+            <section class="asideS3">
+                <h3>Github</h3>
+                <a class="asideLink" target="_blank" href="https://www.google.no/search?q=github&rlz=1C1GCEA_enNO810NO810&oq=github&aqs=chrome..69i57j0l5.2664j0j7&sourceid=chrome&ie=UTF-8">Google "github"</a>
+            </section>
+        </aside>
+
+        <button onclick="topFunction()" id="toppBtn" title="Gå til toppen av siden">Topp</button>
+
+        <footer>
+            <p>&copy; 2018  Stian Albretsen</p>
+            <a style="color: #bbbbbb;" href="mailto:stian.albretsen@hiof.no">stian.albretsen@hiof.no</a><br />
+            <a href="../index.html">Studiewebsted</a>
+        </footer>
+        
+    </div>
+
+</body>
+</html>
