@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Prosjekt i webutvikling ved Høyskolen i Østfold. Artikkel om microdata.">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheet.css" media="screen">
     <link rel="stylesheet" href="printSheet.css" media="print">
@@ -74,7 +75,7 @@
                 <header>
                     <h2>Microdata</h2>
                     <p class="publisert">
-                        Publisert <time datetime="ÅÅÅÅ-MM-DD">DD.MM.ÅÅÅÅ</time>.
+                        Publisert <time datetime="2018-11-05">05.11.2018</time>.
                     </p>
                 </header>
                 <figure class="artikkelBilde">
@@ -83,25 +84,146 @@
                         alt="" 
                     />
                 </figure>
-                <a href="microdataTest1.html">Test 1</a>
-                <a href="microdataTest2.html">Test 2</a>
-                <a href="microdataTest3.html">Test 3</a>
-                <a href="microdataTest4.html">Test 4</a>
-                <a href="microdataTest5.html">Test 5</a>
+                <p>
+                    Microdata er en måte, i tillegg til generel semantikk, å gi innhold enda mer betydning for datamaskiner 
+                    og søkemotorer. Ved å implementere microdata i HTML-koden vil en søkemotor kunne forstå at "Stian Albretsen" 
+                    faktisk er en person, og ikke bare en tekst på en nettside. Det finnes utrolig mange vokabularer og mange 
+                    muligheter. Jeg skal undersøke noen få i denne artikkelen.
+                </p><br>
 
-
+                <a href="microdataTest1.html"><h3>Microdata med vokabularet "Person" fra schema.org.</h3></a>
                 <figure>
                     <img
                         src="medier/microdata/person.png"
-                        alt="screenshot from google "
+                        alt="skjermdump fra google testverktøy"
                     />
                     <figcaption class="normText">
-                        <code>
-                            &lt;div itemscope itemtype="http://schema.org/Person"&gt;<br>
-                                &lt;span itemprop="name">Stian Albretsen&lt;/span&gt;&lt;br&gt;<br>
-                                &lt;span itemprop="email">stian.albretsen@hiof.no&lt;/span&gt;<br>
-                            &lt;/div&gt;
-                        </code>
+                        <pre>
+&lt;div itemscope itemtype="http://schema.org/Person"&gt;<br>
+    &lt;span itemprop="name">Stian Albretsen&lt;/span&gt;&lt;br&gt;<br>
+    &lt;span itemprop="email">stian.albretsen@hiof.no&lt;/span&gt;<br>
+&lt;/div&gt;
+                        </pre>
+                    </figcaption>
+                </figure><br>
+
+                <a href="microdataTest2.html"><h3>Microdata med vokabularet "Recipe" fra schema.org.</h3></a>
+                <figure>
+                    <img
+                        src="medier/microdata/recipe.gif"
+                        alt="gif fra google testverktøy"
+                    />
+                    <figcaption class="normText">
+                        <pre>
+&lt;h3 itemprop="name">BÉARNAISESAUS&lt;/h3>
+&lt;img itemprop="image" src="medier/microdata/bernaise.jpg" alt="skål med saus"/>
+&lt;p  itemprop="description">
+    Har du smakt en skikkelig bearnaise, vet du hvorfor det lønner seg å bruke tid på å lage en saus 
+    fra bunnen av. Denne oppskriften på hjemmelaget bearnaise-saus må du prøve! Denne oppskrifter tar 
+    omkring &lt;span itemprop="cookTime" content="PT30M">30 min&lt;/span>
+&lt;/p>
+&lt;p>Ingredienser til &lt;span itemprop="recipeYield">4 porsjoner&lt;/span>:&lt;/p>
+&lt;pre>
+&lt;span itemprop="recipeIngredient">250 g	        TINE Meierismør&lt;/span>
+&lt;span itemprop="recipeIngredient">2 stk	        sjalottløk&lt;/span>
+&lt;span itemprop="recipeIngredient">3 stilker	estragon&lt;/span>
+&lt;span itemprop="recipeIngredient">1 stk	        laurbærblad&lt;/span>
+&lt;span itemprop="recipeIngredient">½ dl	        hvitvinseddik&lt;/span>
+&lt;span itemprop="recipeIngredient">1 dl	        tørr hvitvin&lt;/span>
+&lt;span itemprop="recipeIngredient">6 stk	        hele pepperkorn eller 0,5 teskje nykvernet pepper&lt;/span>
+&lt;span itemprop="recipeIngredient">3 stk	        eggeplommer&lt;/span>
+&lt;span itemprop="recipeIngredient">1 ss	        sitronsaft&lt;/span>
+&lt;span itemprop="recipeIngredient">½ ts	        salt&lt;/span>
+&lt;span itemprop="recipeIngredient">½ ts	        hvit pepper&lt;/span>
+&lt;/pre>
+
+&lt;ol  itemprop="recipeInstructions">
+    &lt;li>Smelt smør i en kjele ved middels varme. Sett det til side.&lt;/li>
+
+    &lt;li>Finhakk sjalottløk og estragon. Ha løk, laurbærblad, hvitvin, hvitvinseddik, mesteparten 
+    av estragonen og pepper i en kjele. Kok opp og la væsken koke inn til det er igjen 
+    under halvparten (reduksjon). Dette tar 5-10 minutter. Sil av væsken.&lt;/li>
+
+    &lt;li>Ha eggeplomme og krydderreduksjonen i en kjele eller en ildfast bolle (metall eller glass). 
+    Sett bollen over en mindre gryte med kokende vann (vannbad). Bollen må ikke berøre det kokende 
+    vannet. Visp til blandingen er luftig som eggedosis og begynner å tykne.&lt;/li>
+
+    &lt;li>Tilsett det klarnede smøret i en tynn stråle under konstant visping. (Du kan helle direkte 
+    fra gryten, men stopp før melkepartiklene som har sunket til bunnen kommer med. De skal ikke 
+    brukes!) Dett vil føre til at sausen får en tykk og luftig konsistens. Ta kjelen/bollen opp fra 
+    vannbadet. Tilsett resten av den finhakkede estragonen. Smak til med sitronsaft (og ev. salt og pepper).&lt;/li>
+&lt;/ol>
+                        </pre>
+                    </figcaption>
+                </figure><br>
+
+                <a href="microdataTest3.html"><h3>Microdata med vokabularet "Event" fra schema.org.</h3></a>
+                <figure>
+                    <img
+                        src="medier/microdata/event.png"
+                        alt="skjermdump fra google testverktøy"
+                    />
+                    <figcaption class="normText">
+                        <pre>
+&lt;article itemscope itemtype="http://schema.org/Event">
+
+    &lt;div itemprop="name">Forelesning i Webutvikling&lt;/div>
+    &lt;div itemprop="startDate" content="2018-11-15T08:15">
+        Torsdag, 15. november&lt;br>
+        08:15–10:00
+    &lt;/div>
+    &lt;div itemprop="location" itemscope itemtype="http://schema.org/Place">
+            &lt;span itemprop="name">Høgskolen i Østfold - Aud Max&lt;/span>
+        &lt;div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            &lt;span itemprop="streetAddress">B R A veien 4&lt;/span>&lt;br>
+            &lt;span itemprop="postalCode">1757&lt;/span>
+            &lt;span itemprop="addressLocality">Halden&lt;/span>&lt;br>
+            &lt;span itemprop="addressRegion">Østfold&lt;/span>
+            
+        &lt;/div>
+    &lt;/div>
+    
+&lt;/article>
+                        </pre>
+                    </figcaption>
+                </figure><br>
+
+                <a href="microdataTest4.html"><h3>Microdata med vokabularet "Movie" fra schema.org.</h3></a>
+                <figure>
+                    <img
+                        src="medier/microdata/movie.png"
+                        alt="skjermdump fra google testverktøy"
+                    />
+                    <figcaption class="normText">
+                        <pre>
+&lt;article itemscope itemtype="http://schema.org/Movie">
+    &lt;h1 itemprop="name">Bohemian Rhapsody&lt;/h1>
+    &lt;img itemprop="image" src="medier/microdata/Bohemian_Rhapsody_poster.png" alt="Bohemian Rhapsody poster">
+    &lt;div itemprop="productionCompany" itemscope itemtype="http://schema.org/Organization">
+        Produced by: &lt;span itemprop="name">	Graham King, Jim Beach&lt;/span>
+    &lt;/div>
+    &lt;div itemprop="countryOfOrigin" itemscope itemtype="http://schema.org/Country">
+        Country: &lt;span itemprop="name" content="USA">United States&lt;/span>
+    &lt;/div>
+&lt;/article>
+                        </pre>
+                    </figcaption>
+                </figure><br>
+
+                <a href="microdataTest5.html"><h3>Microdata med vokabularet "CivicStructure" fra schema.org.</h3></a>
+                <figure>
+                    <img
+                        src="medier/microdata/civicStru.png"
+                        alt="skjermdump fra google testverktøy"
+                    />
+                    <figcaption class="normText">
+                        <pre>
+&lt;article itemscope itemtype="http://schema.org/CivicStructure">
+    &lt;span itemprop="name">Høyskolen i Østfold&lt;/span>&lt;br>
+    Åpningstider:&lt;br>
+    &lt;span itemprop="openingHours" content="Mo-Fr 08:00-15:45"> Man-Fre kl. 08:00 – 15:45&lt;/span>
+&lt;/article>
+                        </pre>
                     </figcaption>
                 </figure>
             </article>

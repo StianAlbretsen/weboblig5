@@ -71,8 +71,15 @@
                 <a href="#"> Microdata test 4</a>
             </nav>
 
-            <article>
-                
+            <article itemscope itemtype="http://schema.org/Movie">
+                <h1 itemprop="name">Bohemian Rhapsody</h1>
+                <img itemprop="image" src="medier/microdata/Bohemian_Rhapsody_poster.png" alt="Bohemian Rhapsody poster">
+                <div itemprop="productionCompany" itemscope itemtype="http://schema.org/Organization">
+                    Produced by: <span itemprop="name">	Graham King, Jim Beach</span>
+                </div>
+                <div itemprop="countryOfOrigin" itemscope itemtype="http://schema.org/Country">
+                    Country: <span itemprop="name" content="USA">United States</span>
+                </div>
             </article>
         </main>
 

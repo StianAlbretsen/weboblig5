@@ -71,7 +71,23 @@
                 <a href="#"> Microdata test 3</a>
             </nav>
 
-            <article>
+            <article itemscope itemtype="http://schema.org/Event">
+
+                <div itemprop="name">Forelesning i Webutvikling</div>
+                <div itemprop="startDate" content="2018-11-15T08:15">
+                    Torsdag, 15. november<br>
+                    08:15–10:00
+                </div>
+                <div itemprop="location" itemscope itemtype="http://schema.org/Place">
+                        <span itemprop="name">Høgskolen i Østfold - Aud Max</span>
+                    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="streetAddress">B R A veien 4</span><br>
+                        <span itemprop="postalCode">1757</span>
+                        <span itemprop="addressLocality">Halden</span><br>
+                        <span itemprop="addressRegion">Østfold</span>
+                        
+                    </div>
+                </div>
                 
             </article>
         </main>
