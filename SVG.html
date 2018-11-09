@@ -73,64 +73,122 @@
 
             <article>
                 <header>
-                    <h2>Tittel</h2>
+                    <h2>Scalable Vector Graphics (SVG)</h2>
                     <p class="publisert">
-                        Publisert <time datetime="ÅÅÅÅ-MM-DD">DD.MM.ÅÅÅÅ</time>.
+                        Publisert <time datetime="2018-11-09">09.11.2018</time>.
                     </p>
                 </header>
                 <figure class="artikkelBilde">
                     <img 
-                        src="medier/eksempelbilde400.jpg" 
-                        alt="" 
-                        width="400px" 
+                        src="medier/svg.png" 
+                        alt="SVG logo" 
+                        class="img"
                     />
-                    <figcaption>
-                        Eksempelbilde.
-                    </figcaption>
                 </figure>
+                
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
+                    SVG er et format som lar deg kode hvordan et bilde skal se ut, i stedet for at bildet 
+                    er "hardkodet" til hvilke piksler som skal være hvilke farger som i et vanlig bilde. 
+                    Dette har noen veldig store fordeler med tanke på skalering. Et SVG-bilde vil alltid 
+                    se like skarpt ut uansett hvor mye man skalerer det opp, til forskjell for vanlige 
+                    bildeformater som fort blir uskarpe.
                 </p>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
+                    SVG egner seg veldig godt til logoer, ikoner, enkle animasjoner og illustrasjoner, samt 
+                    skjemaer og grafer. Generelt sett all enkel grafikk. SVG egner seg derimot ikke til 
+                    mer realistiske bilder.
                 </p>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
+                    Hvis man skal lage helt enkle former er det helt greit å kode SVG for hånd, men skal man 
+                    lage noe mer avansert kan det lønne seg å bruke et programm som gjør jobben for deg fordi 
+                    SVG-kode fort blir ekstremt lang og avansert. Noen programmer som kan brukes er Inkscape, 
+                    Adobe Illustrator og Sketch(kun mac).
                 </p>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
-                </p>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
-                </p>
-                <figure class="artikkelBilde">
-                    <img 
-                        src="medier/eksempelbilde400.jpg" 
-                        alt="" 
-                        width="400px" 
-                    />
-                    <figcaption>
-                        Eksempelbilde.
+
+                <h3>Noen eksempler</h3>
+
+                <figure>
+                    <svg width="300" height="300">
+                        <circle cx="150" cy="150" r="150" fill="green" />
+                    </svg> 
+                    <figcaption class="normText">
+                        Helt enkel rund figur.
+                        <pre>
+&lt;svg width="300" height="300"&gt;
+    &lt;circle cx="150" cy="150" r="150" fill="green" /&gt;
+&lt;/svg&gt;
+                        </pre>
                     </figcaption>
-                </figure>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
-                </p>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
-                </p>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
-                </p>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
-                </p>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
-                </p>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
-                </p>
+                </figure><br>
+
+                <figure>
+                    <svg width="300" height="300">
+                        <rect 
+                            x="50" y="50" 
+                            width="200" height="200" 
+                            fill="red" stroke="black" 
+                            stroke-width="3" rx="10" ry="10" 
+                        />
+                    </svg>
+                    <figcaption class="normText">
+                        Helt enkel firkantet figur med avrundede hjørner.
+                        <pre>
+&lt;svg width="300" height="300"&gt;
+    &lt;rect 
+        x="50" y="50" 
+        width="200" height="200" 
+        fill="red" stroke="black" 
+        stroke-width="3" rx="10" ry="10" 
+    /&gt;
+&lt;/svg&gt;
+                        </pre>
+                    </figcaption>
+                </figure><br>
+
+                <figure>
+                    <svg height="300" width="500">
+                        <rect 
+                            x="50" y="50" 
+                            width="400" height="200" 
+                            fill="grey" 
+                            rx="10" ry="20" 
+                        />
+                        <polygon 
+                            points="150,65 400,200 160,210 110,65" 
+                            fill="green" 
+                            stroke="darkgreen" stroke-width="2"
+                        />
+                        <ellipse 
+                            cx="250" cy="150" 
+                            rx="50" ry="100" 
+                            fill="yellow"
+                        />
+                    </svg>
+                    <figcaption class="normText">
+                        Flere former i samme SVG-kode.
+                        <pre>
+&lt;svg height="300" width="500"&gt;
+    &lt;rect 
+        x="50" y="50" 
+        width="400" height="200" 
+        fill="grey" 
+        rx="10" ry="20" 
+    /&gt;
+    &lt;polygon 
+        points="150,65 400,200 160,210 110,65" 
+        fill="green" 
+        stroke="darkgreen" stroke-width="2"
+    /&gt;
+    &lt;ellipse 
+        cx="250" cy="150" 
+        rx="50" ry="100" 
+        fill="yellow"
+    /&gt;
+&lt;/svg&gt;
+                        </pre>
+                    </figcaption>
+                </figure><br>
+
             </article>
         </main>
 
@@ -138,7 +196,7 @@
             <section class="asideS1">
                 <h2>Nyttige nettressurser</h2>
                 <iframe 
-                    src="https://www.youtube.com/embed/jV8B24rSN5o" 
+                    src="https://www.youtube.com/embed/W2xknX3k6FY" 
                      
                     allow="autoplay; encrypted-media" 
                     allowfullscreen>
@@ -146,17 +204,17 @@
             </section>
             
             <section class="asideS2">
-                <h3>Responsivt design</h3>
-                <a class="asideLink" target="_blank" href="https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/">Responsive Web Design – What It Is And How To Use It</a>
-                <a class="asideLink" target="_blank" href="https://responsivedesign.is/">Responsive Web Design Is…</a>
-                <a class="asideLink" target="_blank" href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/">Responsive Web Design Basics</a>
-                <a class="asideLink" target="_blank" href="https://www.creativebloq.com/rwd/responsive-web-design-tutorials-71410085">15 really useful responsive web design tutorials</a>
-                <a class="asideLink" target="_blank" href="https://designmodo.com/responsive-design-examples/">Responsive Web Design: 50 Examples and Best Practices</a>
+                <h3>SVG</h3>
+                <a class="asideLink" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG">MDN: Scalable Vector Graphics</a>
+                <a class="asideLink" target="_blank" href="https://css-tricks.com/lodge/svg/">Everything You Need To Know About SVG</a>
+                <a class="asideLink" target="_blank" href="https://flaviocopes.com/svg/">An in-depth SVG tutorial</a>
+                <a class="asideLink" target="_blank" href="https://www.creativebloq.com/design/examples-svg-7112785">20 examples of SVG that will make your jaw drop</a>
+                <a class="asideLink" target="_blank" href="https://css-tricks.com/using-svg/">Using SVG</a>
             </section>
             
             <section class="asideS3">
-                <h3>Github</h3>
-                <a class="asideLink" target="_blank" href="https://www.google.no/search?q=github&rlz=1C1GCEA_enNO810NO810&oq=github&aqs=chrome..69i57j0l5.2664j0j7&sourceid=chrome&ie=UTF-8">Google "github"</a>
+                <h3>Google</h3>
+                <a class="asideLink" target="_blank" href="https://www.google.no/search?q=SVG&rlz=1C1GCEA_enNO810NO810&oq=SVG&aqs=chrome..69i57j69i60l2j0l3.400j0j4&sourceid=chrome&ie=UTF-8">Google "SVG"</a>
             </section>
         </aside>
 

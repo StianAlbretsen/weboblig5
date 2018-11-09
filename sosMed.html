@@ -89,21 +89,80 @@
                 <header>
                     <h2>Teknisk implementasjon av sosiale medier</h2>
                     <p class="publisert">
-                        Publisert <time datetime="ÅÅÅÅ-MM-DD">DD.MM.ÅÅÅÅ</time>.
+                        Publisert <time datetime="2018-11-09">09.11.2018</time>.
                     </p>
                 </header>
                 <figure class="artikkelBilde">
                     <img 
                         src="medier/Social-media.jpg" 
                         alt="" 
-                        width="400px" 
                     />
                 </figure>
-                
-
-                <p><br><br><br><br><br><br><br><br><br>
-                    Jeg har også implementert metadata for sosiale medier på <a href="seo.html">artikkelen om søkemotoroptimalisering</a> og på <a href="index.html">hovedsiden</a>.
+                <p>
+                    Med ca. 3,4 milliarder brukere, er sosiale medier en utmerket platform for å nå ut til ekstremt 
+                    mange mennesker med ditt budskap. Det er derfor viktig å implementere metadata som de forskjellige 
+                    sosiale mediene kan bruke for å presentere ditt innhold. I denne artikkelen går jeg igjennom noen 
+                    eksempler på hvordan dette kan gjøres. Facebook bruker <a href="http://www.ogp.me/">Open Graph</a>, 
+                    Twitter bruker sin egen versjon av Open Graph men kan også lese vanlig Open Graph.
                 </p>
+                <br>
+
+                <h3>Fremgangsmåten</h3>
+
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig5/medier/sosMed/metas.png">
+                    <img 
+                        src="medier/sosMed/metas.png" 
+                        alt="skjermdump av kode. metadata." 
+                    /></a>
+                    <figcaption class="normText">
+                        All metadata skal legges i &lt;head&gt; som vist på bildet over.<br>
+                        <ul>
+                            <li>
+                                <strong>og:url</strong> definerer nettadressen til innholdet som skal publiseres.
+                            </li>
+                            <li>
+                                <strong>og:title</strong> definerer tittelen til innholdet, eksempelvis til artikkelen eller produktet.
+                            </li>
+                            <li>
+                                <strong>og:description</strong> gir en kort beskrivelse av innholdet.
+                            </li>
+                            <li>
+                                <strong>og:image</strong> velger hvilket bilde som skal vises når innholdet deles. Dette er ekstremt 
+                                viktig da visuelt innhold generelt har større innvirkning enn tekst. Hvis denne metadataen ikke er 
+                                tilstede, vil facebook prøve å finne et, med det kan for eksempel bli et ikon eller et annet vilkårlig 
+                                bilde som finnes på siden.
+                            </li>
+                            <li>
+                                <strong>og:type</strong> definerer hva slags type innhold siden har. <a href="http://ogp.me/#types">Open Graph</a> 
+                                har en liten oversikt over de forskjellige typene som er mulig å bruke, det kan eksempelvis være "website" eller "article".
+                            </li>
+                            <li>
+                                <strong>og:locale</strong> definerer lokasjonsdata og språk.
+                            </li>
+                            <li>
+                                <strong>og:site_name</strong> definerer navnet på siden.
+                            </li>
+                        </ul>
+                        <p>
+                            Metadataen for Twitter fungerer på akkurat samme måte, men med "twitter" i stedet for "og".
+                        </p>
+                    </figcaption>
+                </figure>
+                <br />
+
+                <figure>
+                    <a href="http://itstud.hiof.no/~stianalb/weboblig5/medier/sosMed/debugger.png">
+                    <img 
+                        src="medier/sosMed/debugger.png" 
+                        alt="skjermdump av facebook debugger som viser hvordan siden vil bli presentert på facebook." 
+                    /></a>
+                    <figcaption class="normText">
+                        Dette er resultatet av metadataene som er implementert på min artikkel om <a href="seo.html">søkemotoroptimalisering (SEO)</a>. 
+                        Jeg har også implementert metadata for sosiale medier på <a href="index.html">hovedsiden</a>.
+                    </figcaption>
+                </figure>
+
             </article>
         </main>
 
